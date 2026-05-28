@@ -1,0 +1,19 @@
+# Forzar que los archivos de configuración usen LF (Saltos de línea estilo Unix)
+* text=auto eol=lf
+
+# Ocultar código nativo generado por Flutter para que solo cuente Java y Dart
+**/android/**/* linguist-vendored
+**/ios/**/* linguist-vendored
+**/web/**/* linguist-vendored
+**/windows/**/* linguist-vendored
+**/linux/**/* linguist-vendored
+**/macos/**/* linguist-vendored
+
+# Ocultar otros archivos de soporte/diseño
+*.json linguist-vendored
+*.yaml linguist-vendored
+*.yml linguist-vendored
+*.md linguist-documentation
+*.txt linguist-documentation
+.gitignore linguist-vendored
+.gitattributes linguist-vendored
