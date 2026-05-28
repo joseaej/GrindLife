@@ -1,54 +1,107 @@
-# Combined .gitignore for GrindLife (Java Backend & Flutter Frontend)
+# ==============================================================================
+# 👾 GrindLife - Monorepo .gitignore (Java Backend & Flutter Frontend)
+# ==============================================================================
 
-# --- Java / Maven / Gradle / IntelliJ / Eclipse ---
-target/
-!.mvn/wrapper/maven-wrapper.jar
-build/
-.gradle/
-/build/
-!gradle/wrapper/gradle-wrapper.jar
-*.class
-*.bluej
-*.cmt
-*.jar
-*.war
-*.ear
-*.egg-info
+# ========================================
+# 1. Sistema Operativo
+# ========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ========================================
+# 2. Secretos y Entornos
+# ========================================
+.env
+.env.*
+*.pem
+*.key
+application-local.properties
+application-local.yml
+**/android/key.properties
+**/android/app/google-services.json
+
+# ========================================
+# 3. IDEs y Editores
+# ========================================
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+# VS Code
+.vscode/
+*.code-workspace
+# Eclipse
 .project
 .classpath
 .factorypath
 .settings/
-.springBeans
-.sts4-cache
-.idea/
-*.iml
-*.iws
-.vscode/
 bin/
-dependency-reduced-pom.xml
-HS_ERR_PID*
 
-# --- Flutter / Dart ---
+# ========================================
+# 4. Backend (Java / Spring Boot / Maven)
+# ========================================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+dependency-reduced-pom.xml
+# Gradle (Por si migras desde Maven)
+.gradle/
+build/
+# Binarios y Logs de Java
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+
+# ========================================
+# 5. Frontend (Flutter / Dart)
+# ========================================
+# Core de Flutter
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
 .packages
 .pub-cache/
 .pub/
+build/
 /build/
-# Flutter web specific
-build/web
-# Android specific
-android/**/gradle-wrapper.jar
-!android/gradle/wrapper/gradle-wrapper.jar
-android/.gradle/
-android/captures/
-android/app/google-services.json
-# iOS specific
-ios/.symlinks/
-ios/Pods/
-ios/Runner/GeneratedPluginRegistrant.*
-ios/Runner/flutter_export_environment.sh
-# Secrets / Env
-.env
-.env.*
+coverage/
+# Flutter Version Management (FVM)
+.fvm/flutter_sdk
+
+# Android
+**/android/**/gradle-wrapper.jar
+!**/android/gradle/wrapper/gradle-wrapper.jar
+**/android/.gradle/
+**/android/captures/
+
+# iOS
+**/ios/.symlinks/
+**/ios/Pods/
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Runner/flutter_export_environment.sh
+**/ios/**/*.pbxuser
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.perspectivev3
+**/ios/Runner.xcworkspace/xcuserdata
+
+# Web y Escritorio (Windows / macOS / Linux)
+**/build/web/
+**/macos/Flutter/ephemeral/
+**/macos/Runner/Pods/
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
