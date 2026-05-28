@@ -1,0 +1,54 @@
+# Combined .gitignore for GrindLife (Java Backend & Flutter Frontend)
+
+# --- Java / Maven / Gradle / IntelliJ / Eclipse ---
+target/
+!.mvn/wrapper/maven-wrapper.jar
+build/
+.gradle/
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+*.class
+*.bluej
+*.cmt
+*.jar
+*.war
+*.ear
+*.egg-info
+.project
+.classpath
+.factorypath
+.settings/
+.springBeans
+.sts4-cache
+.idea/
+*.iml
+*.iws
+.vscode/
+bin/
+dependency-reduced-pom.xml
+HS_ERR_PID*
+
+# --- Flutter / Dart ---
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+# Flutter web specific
+build/web
+# Android specific
+android/**/gradle-wrapper.jar
+!android/gradle/wrapper/gradle-wrapper.jar
+android/.gradle/
+android/captures/
+android/app/google-services.json
+# iOS specific
+ios/.symlinks/
+ios/Pods/
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Runner/flutter_export_environment.sh
+# Secrets / Env
+.env
+.env.*

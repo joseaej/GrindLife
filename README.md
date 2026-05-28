@@ -1,0 +1,1 @@
+# 👾 GrindLife\n\nMonorepo conteniendo el Backend (Java + Spring Boot) y próximamente el Frontend (Flutter).
